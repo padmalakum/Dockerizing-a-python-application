@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment</title>
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="app">
+    <div class="header">
+        <div class="menu-circle"></div>
+        <div class="header-menu">
+            <a class="menu-link is-active" href="#">Assessment</a>
+        </div>
+        <div class="header-profile">
+            <div class="notification">
+                <span class="notification-number">3</span>
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round" class="feather feather-bell">
+                    <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/>
+                </svg>
+            </div>
+            <svg viewBox="0 0 512 512" fill="currentColor">
+                <path d="M448.773 235.551A135.893 135.893 0 00451 211c0-74.443-60.557-135-135-135-47.52 0-91.567 25.313-115.766 65.537-32.666-10.59-66.182-6.049-93.794 12.979-27.612 19.013-44.092 49.116-45.425 82.031C24.716 253.788 0 290.497 0 331c0 7.031 1.703 13.887 3.006 20.537l.015.015C12.719 400.492 56.034 436 106 436h300c57.891 0 106-47.109 106-105 0-40.942-25.053-77.798-63.227-95.449z"/>
+            </svg>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="main-container">
+            <div class="content-wrapper">
+                <div class="content-section">
+                    <div class="content-section-title">Input</div>
+                    <div class="apps-card">
+                        <form id="post-form">
+                            {% csrf_token %}
+                            <h5 class="validation" id="validation"></h5>
+                            <h5 class="success-message" id="successMessage"></h5>
+                            <textarea type="text" placeholder="Write text" id="text" name="text"></textarea>
+                            <input type="number" placeholder="Start" id="start" name="start">
+                            <input type="number" placeholder="End" id="end" name="end">
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="content-section">
+                    <div class="content-section-title">Result</div>
+                    <h2 class="text-success text-center" id="textData"></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-app"></div>
+</div>
+<script src="/static/assets/js/logic.js"></script>
+</body>
+</html>
