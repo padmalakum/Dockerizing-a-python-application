@@ -37,13 +37,22 @@
                 <div class="content-section">
                     <div class="content-section-title">Input</div>
                     <div class="apps-card">
+                        <h5 class="validation" id="validation"></h5>
+                        <h5 class="success-message" id="successMessage"></h5>
                         <form id="post-form">
                             {% csrf_token %}
-                            <h5 class="validation" id="validation"></h5>
-                            <h5 class="success-message" id="successMessage"></h5>
-                            <textarea type="text" placeholder="Write text" id="text" name="text"></textarea>
-                            <input type="number" placeholder="Start" id="start" name="start">
-                            <input type="number" placeholder="End" id="end" name="end">
+                            <div class="inputPair">
+                                <label for="text">Text</label>
+                                <textarea type="text" placeholder="Write text" id="text" name="text"></textarea>
+                            </div>
+                            <div class="inputPair">
+                                <label for="start">Start</label>
+                                <input type="number" placeholder="Enter number" id="start" name="start">
+                            </div>
+                            <div class="inputPair">
+                                <label for="end">End</label>
+                                <input type="number" placeholder="Enter number" id="end" name="end">
+                            </div>
                             <button type="submit">Submit</button>
                         </form>
                     </div>

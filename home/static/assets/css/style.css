@@ -69,7 +69,7 @@ img {
 
 .app {
   background-color: var(--theme-bg-color);
-  max-height: 600px;
+  max-height: 750px;
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -245,7 +245,7 @@ img {
   margin-bottom: 14px;
 }
 .content-section {
-  margin-top: 30px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -272,16 +272,22 @@ img {
       /* text-align: center; */
     }
 
+    #post-form {
+      display: flex;
+      flex-direction: row;
+    }
 
-    label {
-      display: block;
-      margin-top: 30px;
-      font-size: 16px;
-      font-weight: 500;
+    .inputPair {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10px
+    }
+
+    label{
+    margin-left:12px;
     }
 
     input,textarea {
-      display: block;
       height: 50px;
       width: 300px;
       background-color: rgba(255, 255, 255, 0.07);
@@ -291,7 +297,6 @@ img {
       margin-left: 10px;
       font-size: 14px;
       font-weight: 300;
-      display:inline-block;
       float:left;
     }
 
@@ -300,7 +305,7 @@ img {
     }
 
     button {
-    margin-top: 10px;
+    margin-top: 30px;
     margin-left: 10px;
     width: 200px;
     background-color: #ffffff;
@@ -348,12 +353,12 @@ img {
     position: relative;
 }
 .validation{
-    color:red !important;
+    color: #F48072;
     margin-left:12px;
 }
 
 .success-message{
-    color:green !important;
+    color: #66CDAA;
     margin-left:12px;
 }
 @media screen and (max-width: 1110px) {
