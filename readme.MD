@@ -12,5 +12,5 @@ python manage.py runserver
 username: admin
 password: admin
 ```sh
-127.0.0.1:8000/admin
+localhost:8000/admin
 ```
